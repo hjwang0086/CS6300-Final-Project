@@ -5,8 +5,8 @@
 ![Design1](./images/Design1.png "Design 1")
 
 Pros
-- The author considers the requirements carefully and makes sure all requirements are met. All necessary classes, attributes and operations are identified.
-- It covers all conditions from requirement.
+- The author considers the requirements carefully and makes sure all requirements are met. 
+- All necessary classes, attributes and operations are identified.
 - It provides very detailed information about how modules interact.
 
 Cons
