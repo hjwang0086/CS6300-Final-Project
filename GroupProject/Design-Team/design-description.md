@@ -11,7 +11,9 @@ We make `User` class for a user. The `CompareOfferService` will implicitly intro
 > When choosing to enter current job details, a user will: a. Be shown a user interface to enter (if it is the first time) or edit all of the details of their current job
 > b. Be able to either save the job details or cancel and exit without saving, returning in both cases to the main menu.
 
-This will be handled by login inside the program and GUI.
+We make `Job` class which is the parent class of current job. The Job class has 9 attributes as requested above. The user interface will show several input blocks to get all the information about the current job. In the bottom, there are two buttons, `save` and `cancel`. The `cancel` button will return without any action while the ‘save’ button will continue the following operation. If the current job is null, the system will create a new current job and save all the details, or else the system will update the latest information to the current job.
+
+Finally, the interface will return to the main menu interface automatically.
 
 ## Requirement 3
 
