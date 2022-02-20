@@ -1,0 +1,14 @@
+My accomplishments for this deliverable
+- discussed with the team how the final design should look like
+- reviewed the final design and provided feedback
+- finished the assigned writing task
+    - design-description.md
+        - requirement 4, 5, 6, 7, 8
+    - design-discussion.md
+        - pros and cons for the other three teammates
+        - my version of team design description
+        - my version of summary
+- I was elected to be the project manager
+    - converted the collaborate document to markdown
+    - committed to the team repo
+    - submitted commit ID to Canvas
