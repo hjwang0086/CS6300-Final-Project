@@ -6,8 +6,8 @@
 
 Pros
 - The author considers the requirements carefully and makes sure all requirements are met. All necessary classes, attributes and operations are identified.
-- The use of lines that represent relationships is complex and not used carefully to show the actual design idea.
-- No description for relationships may cause ambiguity of how they work exactly.
+- It covers all conditions from requirement.
+- It provides very detailed information about how modules interact.
 
 Cons
 - The diagram is too complex to understand. The GUI communication part is not necessary in the UML design. To make the diagram more readable, the basic operations (e.g. set() and get() may be omitted).
