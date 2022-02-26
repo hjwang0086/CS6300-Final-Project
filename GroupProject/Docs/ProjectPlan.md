@@ -59,7 +59,7 @@ Activities are planned as following:
 
 ## 3 Team
 
-- Team member: Hao-Jen Wang; Kun Wang; Xinying Jia; Xiaoran Zhang 
+- Team member: Hao-Jen Wang; Kun Wang; Xinying Jia; Xiaoran Zhang
 - Role:
   - Project manager: Devise the project plan and ensure all members finish their work. Submit the deliverable.
   - System architecture designer: Provide the high-level design of the system.
@@ -71,6 +71,6 @@ Activities are planned as following:
 | Team member | Roles |
 |:-:|:-:|
 | Hao-Jen Wang | Define the interface between each module and then develop the app |
-| Kun Wang | * |
+| Kun Wang | Devise the project plan, and develop and test the app |
 | Xinying Jia | Develop the app then design and execute unit and integer test |
 | Xiaoran Zhang | * |

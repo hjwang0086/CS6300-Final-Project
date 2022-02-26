@@ -46,6 +46,8 @@ The app is supposed to be running on an Android device and therefore it is devel
 
 ![ClassDiagram](./images/ClassDiagram.png "ClassDiagram")
 
+The class diagram above shows details of each component. Internal structures of component `CompareOfferService` and `User` are broken down into classes. Each class has member variables and functions to support realization of app functionalities.
+
 ## 4 User Interface Design
 
 The table below shows the prototypes of UI components:
