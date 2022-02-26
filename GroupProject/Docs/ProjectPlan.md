@@ -73,4 +73,4 @@ Activities are planned as following:
 | Hao-Jen Wang | Define the interface between each module and then develop the app |
 | Kun Wang | Devise the project plan, and develop and test the app |
 | Xinying Jia | Develop the app then design and execute unit and integer test |
-| Xiaoran Zhang | * |
+| Xiaoran Zhang | Develop and test the application |
