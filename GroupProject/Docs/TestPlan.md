@@ -25,7 +25,7 @@ White box testing is based on internal structure, which is best suited for a low
 
 ### 1.3 Adequacy Criterion
 
-Test adequacy criterion is a predicate that is true or false for a pair (program, test suite), Including structural testing, fault-based testing, and error-based testing.
+Test adequacy criterion is a predicate that is true or false for a pair (program, test suite).
 
 Test cases include structural testing and achieve full coverage of statement, branch, path, and basic conditions which rely on a control-flow graph.
 
@@ -33,6 +33,8 @@ Test cases include structural testing and achieve full coverage of statement, br
 - Branch coverage =number of branches executed)/ (number of branches in the program
 - Path coverage = number of paths executed)/ (number of paths in the program
 - Basic conditions coverage is defined as "each basic condition must have a True and a False outcome at least once during the execution of the test suite".
+
+Test cases include fault-based testing and error-based testing.
 
 If 40% of test cases failed, suspend testing until the development team fixed all the failed cases.
 
