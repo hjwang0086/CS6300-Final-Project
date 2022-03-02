@@ -3,25 +3,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeightFragment">
-
+    tools:context=".OfferFragment">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:autofillHints=""
             android:editable="false"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Weight Settings"
+            android:text="Add Offer"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Title"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weight_bonus_str"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Company"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weight_benefit_str"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Cost of Living"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#757575"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,17 +150,15 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_salary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -66,15 +176,14 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_bonus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -86,22 +195,21 @@
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
-                android:text="Retirement Benefits"
+                android:text="Retirement\nBenefit"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_benefit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -120,16 +228,16 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_stipend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#757575"
+                android:textColor="#7D7D7D"
                 tools:ignore="TouchTargetSizeCheck" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -140,32 +248,27 @@
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
-                android:text="Restricted Stock Unit Award"
+                android:text="Restricted Stock\nUnit Award"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_stock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
                 android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:orientation="horizontal">
 
             <Space
@@ -173,10 +276,47 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/btn_weight_save"
+                android:id="@+id/btn_offer_save"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:text="Save\nAnd Exit"
+                android:text="Save"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_offer_cancel"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="Cancel"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_offer_return"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:text="Back"
                 android:textSize="16sp" />
 
             <Space
@@ -185,10 +325,10 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_weight_cancel"
+                android:id="@+id/btn_offer_compare"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:text="Cancel\nAnd Exit"
+                android:text="Compare"
                 android:textSize="16sp" />
 
             <Space
@@ -197,4 +337,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </FrameLayout>

@@ -10,16 +10,72 @@
         android:label="fragment_title"
         tools:layout="@layout/fragment_title" >
         <action
-            android:id="@+id/action_titleFragment_to_weightFragment"
+            android:id="@+id/action_title_to_job"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_title_to_offer"
+            app:destination="@id/offerFragment" />
+        <action
+            android:id="@+id/action_title_to_weight"
             app:destination="@id/weightFragment" />
+        <action
+            android:id="@+id/action_title_to_rank"
+            app:destination="@id/rankFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="edu.gatech.seclass.jobcompare6300.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" >
+        <action
+            android:id="@+id/action_job_to_title"
+            app:destination="@id/titleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/offerFragment"
+        android:name="edu.gatech.seclass.jobcompare6300.OfferFragment"
+        android:label="fragment_offer"
+        tools:layout="@layout/fragment_offer" >
+        <action
+            android:id="@+id/action_offer_to_title"
+            app:destination="@id/titleFragment" />
+        <action
+            android:id="@+id/action_offer_to_compare"
+            app:destination="@id/compareFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/weightFragment"
         android:name="edu.gatech.seclass.jobcompare6300.WeightFragment"
         android:label="fragment_weight"
         tools:layout="@layout/fragment_weight" >
         <action
-            android:id="@+id/action_weightFragment_to_titleFragment"
+            android:id="@+id/action_weight_to_title"
+            app:destination="@id/titleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rankFragment"
+        android:name="edu.gatech.seclass.jobcompare6300.RankFragment"
+        android:label="fragment_rank"
+        tools:layout="@layout/fragment_rank" >
+        <action
+            android:id="@+id/action_rank_to_compare"
+            app:destination="@id/compareFragment" />
+        <action
+            android:id="@+id/action_rank_to_title"
+            app:destination="@id/titleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/compareFragment"
+        android:name="edu.gatech.seclass.jobcompare6300.CompareFragment"
+        android:label="fragment_compare"
+        tools:layout="@layout/fragment_compare" >
+        <action
+            android:id="@+id/action_compare_to_title"
             app:destination="@id/titleFragment" />
     </fragment>
 </navigation>

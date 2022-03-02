@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class WeightFragment extends Fragment {
+public class RankFragment extends Fragment {
 
-    public WeightFragment() {
+    public RankFragment() {
         // Required empty public constructor
     }
 
@@ -19,17 +19,17 @@ public class WeightFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_weight, container, false);
-        view.findViewById(R.id.btn_weight_save).setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragment_rank, container, false);
+        view.findViewById(R.id.btn_rank_compare).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                Navigation.findNavController(view).navigate(R.id.action_rank_to_compare);
             }
         });
-        view.findViewById(R.id.btn_weight_cancel).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.btn_rank_return).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                Navigation.findNavController(view).navigate(R.id.action_rank_to_title);
             }
         });
         return view;

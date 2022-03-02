@@ -9,9 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class WeightFragment extends Fragment {
 
-    public WeightFragment() {
+public class JobFragment extends Fragment {
+
+
+    public JobFragment() {
         // Required empty public constructor
     }
 
@@ -19,17 +21,17 @@ public class WeightFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_weight, container, false);
-        view.findViewById(R.id.btn_weight_save).setOnClickListener(new View.OnClickListener() {
+        final View view = inflater.inflate(R.layout.fragment_job, container, false);
+        view.findViewById(R.id.btn_job_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                Navigation.findNavController(view).navigate(R.id.action_job_to_title);
             }
         });
-        view.findViewById(R.id.btn_weight_cancel).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.btn_job_cancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                Navigation.findNavController(view).navigate(R.id.action_job_to_title);
             }
         });
         return view;

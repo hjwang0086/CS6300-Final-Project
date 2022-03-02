@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeightFragment">
-
+    tools:context=".JobFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,10 +17,116 @@
             android:editable="false"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Weight Settings"
+            android:text="Set Current Job"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Title"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Company"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Location"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#7D7D7D"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="Cost of Living"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:typeface="monospace" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="(empty)"
+                android:textAlignment="center"
+                android:textColor="#757575"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,17 +143,15 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_salary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -66,15 +169,14 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_bonus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -86,22 +188,21 @@
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
-                android:text="Retirement Benefits"
+                android:text="Retirement\nBenefit"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_benefit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#7D7D7D"
+                android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -120,16 +221,16 @@
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_stipend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
-                android:textColor="#757575"
+                android:textColor="#7D7D7D"
                 tools:ignore="TouchTargetSizeCheck" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -140,20 +241,19 @@
             <TextView
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
-                android:text="Restricted Stock Unit Award"
+                android:text="Restricted Stock\nUnit Award"
                 android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:typeface="monospace" />
 
             <EditText
-                android:id="@+id/text_weight_stock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="1"
+                android:text="(empty)"
                 android:textAlignment="center"
                 android:textColor="#757575"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -161,7 +261,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="30dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -173,7 +273,7 @@
                 android:layout_height="match_parent" />
 
             <Button
-                android:id="@+id/btn_weight_save"
+                android:id="@+id/btn_job_save"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:text="Save\nAnd Exit"
@@ -185,7 +285,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btn_weight_cancel"
+                android:id="@+id/btn_job_cancel"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:text="Cancel\nAnd Exit"
@@ -197,4 +297,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </FrameLayout>

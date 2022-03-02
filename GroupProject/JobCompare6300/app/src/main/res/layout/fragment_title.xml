@@ -5,9 +5,51 @@
     android:layout_height="match_parent"
     tools:context=".TitleFragment">
 
-    <Button
-        android:id="@+id/btn_title_setWeights"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="set weights" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:background="#5BFFFFFF"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:inputType="textPersonName"
+            android:text="Main Menu"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/btn_title_setJob"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Set Current Job"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_title_setOffer"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Add Offer"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_title_setWeights"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Set Weights"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_title_rankJobs"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:text="Rank Jobs"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
 </FrameLayout>
