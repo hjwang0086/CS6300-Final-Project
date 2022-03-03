@@ -4,22 +4,42 @@ import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserViewModel extends AndroidViewModel {
     private Job mCurrentJob;
     private List<Job> mJobOffers;
+    private Weight mWeight;
+    private Job mCompareJob1;
+    private Job mCompareJob2;
 
     public UserViewModel(Application application) {
         super(application);
         mCurrentJob = new Job();
         mJobOffers = new ArrayList<Job>();
+        mWeight = new Weight();
+        mCompareJob1 = new Job();
+        mCompareJob2 = new Job();
     }
 
     public Job getCurrentJob() { return mCurrentJob; }
-    public List<Job> getJobOffers() { return mJobOffers; }
+    public Weight getWeight() { return mWeight; }
+    public Job getCompareJob1() { return mCompareJob1; }
+    public Job getCompareJob2() { return mCompareJob2; }
 
-    public void addJobOffers(Job jobOffer) { mJobOffers.add(jobOffer); }
+    public void setCurrentJob(Job job) { mCurrentJob = job; }
+    public void setWeight(Weight weight) { mWeight = weight; }
+    public void setCompareJob1(Job job) { mCompareJob1 = job; }
+    public void setCompareJob2(Job job) { mCompareJob2 = job; }
+    public void addJobOffer(Job job) { mJobOffers.add(job); }
+
+    public List<Job> getJobs() {
+        List<Job> jobs = new ArrayList<Job>(mJobOffers);
+        jobs.add(mCurrentJob);
+
+        //TODO: sort jobs
+
+        return jobs;
+    }
 }

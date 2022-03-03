@@ -23,14 +23,12 @@ public class RankFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
-        mModel = new ViewModelProvider(this).get(UserViewModel.class);
+        mModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
 
-        {
-            TextView mTitle1 = view.findViewById(R.id.rank_title1);
-            //if (!mModel.getCurrentJob().getTitle().isEmpty()) {
-                mTitle1.setText(mModel.getCurrentJob().getTitle());
-            //}
-        }
+        TextView mTitle1 = view.findViewById(R.id.rank_title1);
+        mTitle1.setText(mModel.getCurrentJob().getTitle());
+        TextView mCompany1 = view.findViewById(R.id.rank_company1);
+        mCompany1.setText(mModel.getCurrentJob().getCompany());
 
         view.findViewById(R.id.btn_rank_compare).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -11,6 +11,20 @@ public class Job {
     private int mRelocation;
     private int mStock;
 
+    public Job() { reset(); }
+
+    public void reset() {
+        mTitle = "";
+        mCompany = "";
+        mLocation = "";
+        mLivingCost = 0;
+        mSalary = 0;
+        mBonus = 0;
+        mRetirementBenefits = 0;
+        mRelocation = 0;
+        mStock = 0;
+    }
+
     public String getTitle() { return mTitle; }
     public String getCompany() { return mCompany; }
     public String getLocation() { return mLocation; }
