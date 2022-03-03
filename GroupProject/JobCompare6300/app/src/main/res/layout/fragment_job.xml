@@ -37,6 +37,7 @@
                 android:typeface="monospace" />
 
             <EditText
+                android:id="@+id/job_editTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
