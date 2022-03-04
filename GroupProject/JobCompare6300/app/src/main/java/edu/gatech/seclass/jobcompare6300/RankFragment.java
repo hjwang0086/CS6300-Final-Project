@@ -5,6 +5,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,14 +27,16 @@ public class RankFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_rank, container, false);
         mModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
 
-        TextView mTitle1 = view.findViewById(R.id.rank_title1);
-        mTitle1.setText(mModel.getCurrentJob().getTitle());
-        TextView mCompany1 = view.findViewById(R.id.rank_company1);
-        mCompany1.setText(mModel.getCurrentJob().getCompany());
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        JobAdapter jobAdapter = new JobAdapter(mModel.getJobs());
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(jobAdapter);
 
         view.findViewById(R.id.btn_rank_compare).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                setCompareJobs();
                 Navigation.findNavController(view).navigate(R.id.action_rank_to_compare);
             }
         });
@@ -44,5 +48,18 @@ public class RankFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    private void setCompareJobs() {
+        boolean isFirstJobSelected = false;
+        for (Job job : mModel.getJobs()) {
+            if (!isFirstJobSelected) {
+                mModel.setCompareJob1(job);
+                isFirstJobSelected = true;
+            } else {
+                mModel.setCompareJob2(job);
+                break;
+            }
+        }
     }
 }

@@ -28,6 +28,7 @@ public class CompareFragment extends Fragment {
         view.findViewById(R.id.btn_compare_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                resetSelected();
                 // Navigation.findNavController(view).navigate(R.id.action_compare_to_title);
                 Navigation.findNavController(view).popBackStack();
             }
@@ -35,6 +36,7 @@ public class CompareFragment extends Fragment {
         view.findViewById(R.id.btn_compare_return).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                resetSelected();
                 Navigation.findNavController(view).navigate(R.id.action_compare_to_title);
             }
         });
@@ -92,5 +94,11 @@ public class CompareFragment extends Fragment {
         textRelocation2.setText(Integer.toString(mModel.getCompareJob2().getRelocation()));
         TextView textStock2 = getView().findViewById(R.id.compare_textStock2);
         textStock2.setText(Integer.toString(mModel.getCompareJob2().getStock()));
+    }
+
+    private void resetSelected() {
+        for (Job job : mModel.getJobs()) {
+            job.setSelected(false);
+        }
     }
 }

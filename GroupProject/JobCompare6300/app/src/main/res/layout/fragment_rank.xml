@@ -82,228 +82,234 @@
 
         </LinearLayout>
 
-        <ScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id = "@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="300dp" >
+            android:layout_height="300dp"
+            tools:listitem="@layout/recyclerview_item" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="300dp" >-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:text="1"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:id="@+id/rank_title1"
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Sr. Engineer"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="1"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <TextView
-                        android:id="@+id/rank_company1"
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Meta"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/rank_title1"-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Sr. Engineer"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <CheckBox
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:checked="true"
-                        android:textAlignment="textEnd" />
+<!--                    <TextView-->
+<!--                        android:id="@+id/rank_company1"-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Meta"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                </LinearLayout>
+<!--                    <CheckBox-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:checked="true"-->
+<!--                        android:textAlignment="textEnd" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+<!--                </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:background="#8BC34A"
-                        android:text="2"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="#8BC34A"
-                        android:text="Engineer"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:background="#8BC34A"-->
+<!--                        android:text="2"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="#8BC34A"
-                        android:text="Amazon"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="#8BC34A"-->
+<!--                        android:text="Engineer"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <CheckBox
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:checked="true"
-                        android:textAlignment="textEnd" />
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="#8BC34A"-->
+<!--                        android:text="Amazon"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                </LinearLayout>
+<!--                    <CheckBox-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:checked="true"-->
+<!--                        android:textAlignment="textEnd" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+<!--                </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:text="3"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Engineer"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="3"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Apple"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Engineer"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <CheckBox
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:checked="false"
-                        android:clickable="true"
-                        android:textAlignment="textEnd" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Apple"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+<!--                    <CheckBox-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:checked="false"-->
+<!--                        android:clickable="true"-->
+<!--                        android:textAlignment="textEnd" />-->
+<!--                </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:text="4"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Engineer"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="4"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Microsoft"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Engineer"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <CheckBox
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:textAlignment="textEnd" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Microsoft"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+<!--                    <CheckBox-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:textAlignment="textEnd" />-->
+<!--                </LinearLayout>-->
 
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="match_parent"
-                        android:text="5"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:orientation="horizontal">-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Engineer"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="5"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Google"
-                        android:textAlignment="center"
-                        android:textColor="#000000"
-                        android:textSize="18sp"
-                        android:typeface="normal" />
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Engineer"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-                    <CheckBox
-                        android:layout_width="32dp"
-                        android:layout_height="match_parent"
-                        android:textAlignment="textEnd" />
-                </LinearLayout>
+<!--                    <TextView-->
+<!--                        android:layout_width="140dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:text="Google"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="18sp"-->
+<!--                        android:typeface="normal" />-->
 
-            </LinearLayout>
-        </ScrollView>
+<!--                    <CheckBox-->
+<!--                        android:layout_width="32dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:textAlignment="textEnd" />-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+<!--        </ScrollView>-->
 
         <Space
             android:layout_width="match_parent"

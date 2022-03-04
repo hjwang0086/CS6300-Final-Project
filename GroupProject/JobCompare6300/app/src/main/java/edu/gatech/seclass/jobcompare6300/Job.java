@@ -10,6 +10,8 @@ public class Job {
     private int mRetirementBenefits;
     private int mRelocation;
     private int mStock;
+    private boolean mIsSelected;
+    private boolean mIsCurrentJob;
 
     public Job() { reset(); }
 
@@ -23,6 +25,8 @@ public class Job {
         mRetirementBenefits = 0;
         mRelocation = 0;
         mStock = 0;
+        mIsSelected = false;
+        mIsCurrentJob = false;
     }
 
     public String getTitle() { return mTitle; }
@@ -34,6 +38,8 @@ public class Job {
     public int getRetirementBenefits() { return mRetirementBenefits; }
     public int getRelocation() { return mRelocation; }
     public int getStock() { return mStock; }
+    public boolean isSelected() { return mIsSelected; }
+    public boolean isCurrentJob() { return mIsCurrentJob; }
 
     public void setTitle(String title) { mTitle = title; }
     public void setCompany(String company) { mCompany = company; }
@@ -44,4 +50,14 @@ public class Job {
     public void setRetirementBenefits(int retirementBenefits) { mRetirementBenefits = retirementBenefits; }
     public void setRelocation(int relocation) { mRelocation = relocation; }
     public void setStock(int stock) { mStock = stock; }
+    public void setSelected(boolean isSelected) { mIsSelected = isSelected; }
+    public void setCurrentJob(boolean isCurrentJob) { mIsCurrentJob = isCurrentJob; }
+
+    public boolean equals(Job job) {
+        return (mTitle.equals(job.getTitle()) && mCompany.equals(job.getCompany())
+            && mLocation.equals(job.getLocation()) && (mLivingCost == job.getLivingCost())
+            && (mSalary == job.getSalary()) && (mBonus == job.getBonus())
+            && (mRetirementBenefits == job.getRetirementBenefits()) && (mRelocation == job.getRelocation())
+            && (mStock == job.getStock()));
+    }
 }
