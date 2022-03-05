@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class JobDao {
     private Context context;
@@ -61,26 +62,18 @@ public class JobDao {
         values.put("stock", job.getStock());
         values.put("isCurrent", job.isCurrentJob());
 
-        return db.update("Jons", values, "isCurrent=?", new String[]{String.valueOf("True")});
+        return db.update("Jobs", values, "isCurrent=?", new String[]{String.valueOf("True")});
     }
 
-    public ArrayList<String> getData(){
-        ArrayList listOffer = new ArrayList();
-        String[] columns = {"title", "company","score","isCurrent"};
-        Cursor cursor = db.query("Jobs", columns, null, null, null, null,"score"+"DESC");
-
-        int titleCol = cursor.getColumnIndex("title");
-        int companyCol = cursor.getColumnIndex("company");
-        int scoreCol = cursor.getColumnIndex("score");
-        int isCurrentCol = cursor.getColumnIndex("isCurrent");
+    public List<Job> getData(){
+        List<Job> listOffer = new ArrayList<Job>();
+        String[] columns = {"title", "company", "location", "livingCost", "salary", "bonus", "retirementBenefits", "relocation", "stock", "isCurrent"};
+        Cursor cursor = db.query("Jobs", columns, null, null, null, null,null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            if(cursor.getString(isCurrentCol) == "Ture"){
-                listOffer.add(cursor.getString(titleCol) + "  " + cursor.getString(companyCol) + "  " + cursor.getString(scoreCol) + "<<---");
-            }else{
-                listOffer.add(cursor.getString(titleCol) + "  " + cursor.getString(companyCol) + "  " + cursor.getString(scoreCol));
-
-            }
+            Job job = new Job();
+            job.setTitle(cursor.getString(cursor.getColumnIndex("title")));
+            listOffer.add(job);
         }
 
         return listOffer;

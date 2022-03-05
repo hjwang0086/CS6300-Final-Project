@@ -9,7 +9,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
     public static final String name = "6300JobCompare.db";
     public static final int DB_VERSION = 1;
 
-    public static final String CREATE_JOB = "create table Jobs( _id INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(64),company varchar(64),location varchar(20),livingCost integer, salary integer, bonus integer,retireBenefit integer, relocation integer, stock integer, score float, isCurrent boolean)";
+    public static final String CREATE_JOB = "create table Jobs( _id INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(64), company varchar(64), location varchar(20), livingCost integer, salary integer, bonus integer, retirementBenefits integer, relocation integer, stock integer, isCurrent boolean)";
 
     public MyDBHelper(Context context) {
         super(context, name, null, DB_VERSION);

@@ -32,6 +32,7 @@ public class UserViewModel extends AndroidViewModel {
     public void setWeight(Weight weight) { mWeight = weight; }
     public void setCompareJob1(Job job) { mCompareJob1 = job; }
     public void setCompareJob2(Job job) { mCompareJob2 = job; }
+    public void setJobOffers(List<Job> jobOffers) { mJobOffers = jobOffers; }
     public void addJobOffer(Job job) { mJobOffers.add(job); }
 
     public List<Job> getJobs() {
