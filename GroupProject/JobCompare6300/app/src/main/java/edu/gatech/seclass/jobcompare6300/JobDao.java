@@ -66,16 +66,26 @@ public class JobDao {
     }
 
     public List<Job> getData(){
-        List<Job> listOffer = new ArrayList<Job>();
-        String[] columns = {"title", "company", "location", "livingCost", "salary", "bonus", "retirementBenefits", "relocation", "stock", "isCurrent"};
-        Cursor cursor = db.query("Jobs", columns, null, null, null, null,null);
+        List listJob = new ArrayList();
+        Cursor cursor = db.query("Jobs", null, null, null, null, null,null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            Job job = new Job();
-            job.setTitle(cursor.getString(cursor.getColumnIndex("title")));
-            listOffer.add(job);
+            if(cursor != null && cursor.getCount()>=1) {
+                Job current = new Job();
+                current.setTitle(cursor.getString(cursor.getColumnIndex("title")));
+                current.setCompany(cursor.getString(cursor.getColumnIndex("company")));
+                current.setLocation(cursor.getString(cursor.getColumnIndex("location")));
+                current.setLivingCost(cursor.getInt(cursor.getColumnIndex("livingCost")));
+                current.setSalary(cursor.getInt(cursor.getColumnIndex("salary")));
+                current.setBonus(cursor.getInt(cursor.getColumnIndex("bonus")));
+                current.setRetirementBenefits(cursor.getInt(cursor.getColumnIndex("retireBenefit")));
+                current.setRelocation(cursor.getInt(cursor.getColumnIndex("relocation")));
+                current.setStock(cursor.getInt(cursor.getColumnIndex("stock")));
+                current.setCurrentJob(cursor.getInt(cursor.getColumnIndex("isCurrent")) > 0);
+                listJob.add(current);
+            }
         }
 
-        return listOffer;
+        return listJob;
     }
 }

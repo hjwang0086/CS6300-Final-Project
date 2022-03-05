@@ -10,6 +10,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
     public static final int DB_VERSION = 1;
 
     public static final String CREATE_JOB = "create table Jobs( _id INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(64), company varchar(64), location varchar(20), livingCost integer, salary integer, bonus integer, retirementBenefits integer, relocation integer, stock integer, isCurrent boolean)";
+    public static final String CREATE_WEIGHT = "create table Weight( _id INTEGER PRIMARY KEY AUTOINCREMENT, AYS integer, AYB integer, RS integer, RPB integer, RSUA integer)";
 
     public MyDBHelper(Context context) {
         super(context, name, null, DB_VERSION);
@@ -18,7 +19,7 @@ public class MyDBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_JOB);
-        //db.execSQL("insert into Jobs(studentid,studentname,majoy,booknum)Values('40433','林锦雄','计科','123456')");
+        db.execSQL(CREATE_WEIGHT);
 
     }
     @Override
