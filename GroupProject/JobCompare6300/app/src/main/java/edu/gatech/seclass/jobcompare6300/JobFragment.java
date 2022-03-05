@@ -83,6 +83,8 @@ public class JobFragment extends Fragment {
             newJob.setStock(Integer.parseInt(editStock.getText().toString()));
         }
 
+        newJob.setCurrentJob(true);
+
         mModel.setCurrentJob(newJob);
     }
 }

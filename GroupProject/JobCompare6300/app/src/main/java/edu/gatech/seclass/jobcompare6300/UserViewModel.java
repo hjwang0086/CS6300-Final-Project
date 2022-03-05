@@ -5,7 +5,6 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -39,7 +38,9 @@ public class UserViewModel extends AndroidViewModel {
 
     public List<Job> getJobs() {
         List<Job> jobs = new ArrayList<Job>(mJobOffers);
-        jobs.add(mCurrentJob);
+        if (mCurrentJob.isCurrentJob())
+            jobs.add(mCurrentJob); // avoid adding redundant
+
         jobs.sort(new ScoreComparator().reversed());
 
         return jobs;
