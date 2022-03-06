@@ -59,3 +59,545 @@ Android with testing applications tools and extend JUnit and selenium for functi
 | Add offer | Edit and save a new offer | 1. input the job details <br> 2. save or cancel | A new offer information is created | 1. the action is saved <br> 2. the action is cancelled <br> 3. the information is invalid |  |  |
 | Compare Jobs | Compare selected jobs under the weights setting | 1. User select target at least two jobs (current job or offer) <br> 2. Each target job calculated under the compare weight setting (if not set, then use the default setting) <br> 3. Sort the target jobs by the compare score <br> 4. display the job details on the sorted order | The target jobs are shown in a sorted order | 1. target job is invalid <br> 2. the selected is compared and displayed in the sorted way |  |  |
 | Set Weights | Update the job comparing weight setting | 1. Edit the latest weight setting <br> 2. save or cancel | The weight setting is updated. | 1. the action is saved <br> 2 the action is cancelled <br> 3. the information is invalid |  |  |
+
+#### 2.1 Sample Test Case 
+
+Purpose: to test function of edit current job 
+
+Steps: 
+
+Open the app 
+
+Click “SET CURRENT JOB” Button 
+
+*check 1* app should show current job editing screen 
+
+Set current job as following: 
+
+Title: “Software Engineer” 
+
+Company: “Apple” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “SAVE AND EXIT” button to return to main menu 
+
+Expected result: Job entered can be found in the database with correct information. 
+
+The screen goes back to the main menu. 
+
+Actual result: Job entered can be found in the database with correct information. 
+
+The screen goes back to the main menu. 
+
+Pass/Fail: pass 
+
+Additional Information: 
+
+ 
+
+#### 2.2 Sample Test Case 
+
+Purpose: to test function of edit current job 
+
+Steps: 
+
+Open the app 
+
+Click “SET CURRENT JOB” Button 
+
+*check 1* app should show current job editing screen 
+
+Set current job as following: 
+
+Title: “Software Engineer” 
+
+Company: “Apple” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “CANCEL AND EXIT” button to return to main menu 
+
+Expected result: The database has no change. The screen goes back to the main menu.  
+
+Actual result: The database has no change. The screen goes back to the main menu. 
+
+ 
+
+Pass/Fail: pass 
+
+Additional Information: 
+
+ 
+
+#### 2.3 Sample Test Case 
+
+Purpose: to test function of add offer 
+
+Steps: 
+
+Open the app 
+
+Click “ADD OFFER” Button 
+
+*check 1* app should show add offer screen 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “SAVE” button to save data. 
+
+Expected result: The offer details are saved in database. The screen shows a text “Offer has been saved” then turn to a new add job screen 
+
+Actual result: The offer details are saved in database. The screen shows a text “Offer has been saved” then turn to a new add job screen 
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+#### 2.4 Sample Test Case 
+
+Purpose: to test function of add offer 
+
+Steps: 
+
+Open the app 
+
+Click “ADD OFFER” Button 
+
+*check 1* app should show add offer screen 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “CLEAR” button. 
+
+Expected result: The database has no change. The screen shows a new add offer screen 
+
+Actual result: The database has no change. The screen shows a new add offer screen 
+
+Pass/Fail: pass 
+
+Additional Information: 
+
+ 
+
+#### 2.5 Sample Test Case 
+
+Purpose: to test function of add offer 
+
+Steps: 
+
+Open the app 
+
+Click “ADD OFFER” Button 
+
+*check 1* app should show add offer screen 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “BACK” button to return to main menu 
+
+Expected result: The screen shows the main menu. 
+
+Actual result: The screen shows the main menu. 
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+#### 2.6 Sample Test Case 
+
+Purpose: to test function of add offer 
+
+Steps: 
+
+Open the app 
+
+Click “ADD OFFER” Button 
+
+*check 1* app should show add offer screen 
+
+Set current job as following: 
+
+Title: “Software Engineer” 
+
+Company: “Apple” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 200000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 9000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “COMPARE” button to start comparing. 
+
+Expected result: The offer is saved correctly in database. The screen shows a job comparison screen which displays the offer and current job details. 
+
+Actual result: The offer is saved correctly in database. The screen shows a job comparison screen which displays the offer and current job details. 
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+#### 2.7 Sample Test Case 
+
+Purpose: to test function of add offer 
+
+Steps: 
+
+Open the app 
+
+Click “ADD OFFER” Button 
+
+*check 1* app should show add offer screen 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “COMPARE” button to start comparing. 
+
+Expected result: The offer is saved correctly in database. The screen shows a text ”Please enter current job beforehand” and turn to add job screen. 
+
+Actual result: The offer is saved correctly in database. The screen shows a text ”Please enter current job beforehand” and turn to add job screen. 
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+ 
+
+#### 2.8 Sample Test Case 
+
+Purpose: to test function of set weights 
+
+Steps: 
+
+Open the app 
+
+Click “SET WEIGHTS” Button 
+
+*check 1* app should show weight settings screen 
+
+Set the new offer as following: 
+
+Yearly Salary: 2  
+
+Yearly Bonus: 3 
+
+Retirement Benefits: 0 
+
+Relocation stipend: 0 
+
+Restricted Stock Unit Award: 1 
+
+Click “SAVE AND EXIT” button. 
+
+Expected result: The settings are updated in database. The screen shows a text ”Weights have been updated” then turn to the main menu. 
+
+Actual result: The settings are updated in database. The screen shows a text ”Weights have been updated” then turn to the main menu. 
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+#### 2.9 Sample Test Case 
+
+Purpose: to test function of set weights 
+
+Steps: 
+
+Open the app 
+
+Click “SET WEIGHTS” Button 
+
+*check 1* app should show weight settings screen 
+
+Set the new offer as following: 
+
+Yearly Salary: 2  
+
+Yearly Bonus: 3 
+
+Retirement Benefits: 0 
+
+Relocation stipend: 0 
+
+Restricted Stock Unit Award: 1 
+
+Click “CANCEL AND EXIT” button. 
+
+Expected result: The settings keep default value in database. The screen turn to the main menu. 
+
+Actual result: The settings keep default value in database. The screen turn to the main menu. 
+
+ 
+
+Pass/Fail: pass 
+
+Additional Information: 
+
+ 
+
+ 
+
+#### 2.10 Sample Test Case 
+
+Purpose: to test function of rank jobs 
+
+Steps: 
+
+Open the app 
+
+Set current job as following: 
+
+Title: “Software Engineer” 
+
+Company: “Apple” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 200000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 9000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Amazon” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 100000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Set the new offer as following: 
+
+Title: “Software Engineer” 
+
+Company: “Zoom” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 900000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 7000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “RANK JOBS” Button 
+
+*check 1* app should show job ranking screen as following: 
+
+Item 0,Software Engineer,Zoom 
+
+Item 1 Software Engineer, Apple 
+
+Item 2 Software Engineer,Amazon 
+
+ 
+
+Click “MAIN MENU” button. 
+
+ the screen displays the jobs in the sorted order.  
+
+Actual result: After click “RANK JOBS” button, the app should show job ranking screen as expected.  
+
+Pass/Fail:pass 
+
+Additional Information: 
+
+ 
+
+#### 2.11 Sample Test Case 
+
+Purpose: to test function of rank jobs 
+
+Steps: 
+
+Open the app 
+
+Set current job as following: 
+
+Title: “Software Engineer” 
+
+Company: “Apple” 
+
+Location: “U.S.” 
+
+Cost of Living: 25 
+
+Yearly Salary: 200000 
+
+Yearly Bonus: 50000 
+
+Retirement Benefits: 9000000 
+
+Relocation Stipend: 5000 
+
+RSUA: 200 
+
+Click “RANK JOBS” Button 
+
+ The screen should display a text ”Please enter job/offers before ranking” .  
+
+Actual result: The screen displays a text ”Please enter job/offers before ranking” 
+
+Pass/Fail: pass 
+
+Additional Information: 
