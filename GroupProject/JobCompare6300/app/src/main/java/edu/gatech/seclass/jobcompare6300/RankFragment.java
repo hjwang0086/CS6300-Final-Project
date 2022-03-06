@@ -43,9 +43,7 @@ public class RankFragment extends Fragment {
                 if (success) {
                     Navigation.findNavController(view).navigate(R.id.action_rank_to_compare);
                 } else {
-                    // TODO: solve the problem that error message doesn't show up
-                    Button btn_id = (Button) view.findViewById(R.id.btn_rank_compare);
-                    btn_id.setError("Number of selected jobs should be exactly 2.");
+                    Toast.makeText(getContext(), "Number of selected jobs should be exactly 2.", Toast.LENGTH_LONG).show();
                 }
             }
         });

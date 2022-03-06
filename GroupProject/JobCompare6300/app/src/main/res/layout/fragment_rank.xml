@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" * Green row indicates your current job.\n * Select two boxes to compare the jobs.\n"
+            android:text=" * Red-colored job indicates your current job.\n * Select exactly two boxes for comparison.\n"
             android:textColor="#2196F3"
             android:textSize="18sp"
             android:textStyle="bold" />

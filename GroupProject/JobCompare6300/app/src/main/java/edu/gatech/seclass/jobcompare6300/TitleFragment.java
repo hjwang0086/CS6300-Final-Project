@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class TitleFragment extends Fragment {
     private UserViewModel mModel;
@@ -50,9 +51,7 @@ public class TitleFragment extends Fragment {
                 if (mModel.getJobs().size() >= 1) {
                     Navigation.findNavController(view).navigate(R.id.action_title_to_rank);
                 } else {
-                    // TODO: solve the problem that error message doesn't show up
-                    Button btn_id = (Button) view.findViewById(R.id.btn_title_rankJobs);
-                    btn_id.setError("There is no job currently.");
+                    Toast.makeText(getContext(), "Please enter job/offers before ranking", Toast.LENGTH_LONG).show();
                 }
             }
         });

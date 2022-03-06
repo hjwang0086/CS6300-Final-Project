@@ -1,6 +1,7 @@
 package edu.gatech.seclass.jobcompare6300;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,16 @@ public class JobAdapter extends RecyclerView.Adapter<JobViewHolder> {
         holder.mRank.setText(Integer.toString(position + 1));
         holder.mTitle.setText(job.getTitle());
         holder.mCompany.setText(job.getCompany());
+
+        if (job.isCurrentJob()) {
+            holder.mRank.setTextColor(Color.RED);
+            holder.mRank.setTypeface(null, Typeface.BOLD);
+            holder.mTitle.setTextColor(Color.RED);
+            holder.mTitle.setTypeface(null, Typeface.BOLD);
+            holder.mCompany.setTextColor(Color.RED);
+            holder.mCompany.setTypeface(null, Typeface.BOLD);
+        }
+
         holder.mLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
