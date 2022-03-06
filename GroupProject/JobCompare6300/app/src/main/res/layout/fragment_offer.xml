@@ -291,7 +291,7 @@
                 android:id="@+id/btn_offer_cancel"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:text="Cancel"
+                android:text="Clear"
                 android:textSize="16sp" />
 
             <Space

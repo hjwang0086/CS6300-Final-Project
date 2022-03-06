@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RankFragment extends Fragment {
     private UserViewModel mModel;
@@ -36,8 +39,12 @@ public class RankFragment extends Fragment {
         view.findViewById(R.id.btn_rank_compare).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setCompareJobs();
-                Navigation.findNavController(view).navigate(R.id.action_rank_to_compare);
+                boolean success = setCompareJobs(); // select two job exactly
+                if (success) {
+                    Navigation.findNavController(view).navigate(R.id.action_rank_to_compare);
+                } else {
+                    Toast.makeText(getContext(), "Number of selected jobs should be exactly 2.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -50,16 +57,21 @@ public class RankFragment extends Fragment {
         return view;
     }
 
-    private void setCompareJobs() {
-        boolean isFirstJobSelected = false;
+    private boolean setCompareJobs() {
+        //boolean isFirstJobSelected = false;
+        int numSelected = 0;
+        System.out.println(mModel.getJobs().size());
         for (Job job : mModel.getJobs()) {
-            if (!isFirstJobSelected) {
-                mModel.setCompareJob1(job);
-                isFirstJobSelected = true;
-            } else {
-                mModel.setCompareJob2(job);
-                break;
+            if (job.isSelected()) {
+                if (numSelected == 0) {
+                    mModel.setCompareJob1(job);
+                } else {
+                    mModel.setCompareJob2(job);
+                }
+                numSelected ++;
             }
         }
+
+        return numSelected == 2; // success criteria
     }
 }

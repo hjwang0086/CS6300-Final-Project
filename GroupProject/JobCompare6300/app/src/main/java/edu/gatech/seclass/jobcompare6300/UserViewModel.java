@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class UserViewModel extends AndroidViewModel {
@@ -37,10 +38,25 @@ public class UserViewModel extends AndroidViewModel {
 
     public List<Job> getJobs() {
         List<Job> jobs = new ArrayList<Job>(mJobOffers);
-        jobs.add(mCurrentJob);
+        if (mCurrentJob.isCurrentJob())
+            jobs.add(mCurrentJob); // avoid adding redundant
 
-        //TODO: sort jobs
+        jobs.sort(new ScoreComparator().reversed());
 
         return jobs;
+    }
+
+    private class ScoreComparator implements Comparator<Job> {
+        private float score(Job job) {
+            return job.getSalary() * mWeight.getAYS() + job.getBonus() * mWeight.getAYB()
+                    + job.getRelocation() * mWeight.getRS()
+                    + (job.getRetirementBenefits()+(float)job.getSalary()/100) * mWeight.getRPB()
+                    + ((float)job.getStock()/4) * mWeight.getRSUA();
+        }
+
+        // Function to compare
+        public int compare(Job job1, Job job2) {
+            return Float.compare(score(job1), score(job2));
+        }
     }
 }
