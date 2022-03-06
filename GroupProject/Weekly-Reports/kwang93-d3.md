@@ -1,0 +1,13 @@
+My accomplishments for this deliverable
+- Application development
+    - decided the application architecture as "Model - View - View Model"
+    - decided using "navigation - fragments" for screen transition and management
+    - prepared skelton code for the team to develop individually
+    - prepared code of recyclerView for displaying ranked jobs
+    - wrote the whole View Model which stores user information for screens to access
+    - used database interface to store to and retrieves from View Model
+    - tested simple test cases to make sure all the components are connected correctly
+        - these test cases are passed with expected results
+- Document update
+    - updated DesignDocument.md with an explanation of actual architecture in the developed application
+    - provided simple test cases in TestPlan.md
