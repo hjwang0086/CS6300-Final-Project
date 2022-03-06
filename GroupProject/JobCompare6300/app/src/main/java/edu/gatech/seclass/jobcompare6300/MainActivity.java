@@ -11,12 +11,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private UserViewModel mModel;
     private JobDao jobDao;
+    private WeightDao weightDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mModel = new ViewModelProvider(this).get(UserViewModel.class);
+
         jobDao = new JobDao(this);
         jobDao.open();
         List<Job> jobs = jobDao.getData();
@@ -29,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         mModel.setJobOffers(jobOffers);
+
+        weightDao = new WeightDao(this);
+        weightDao.open();
+        Weight weight = weightDao.getWeight();
+        if (weight != null) {
+            mModel.setWeight(weight);
+        }
     }
 
     @Override
@@ -36,8 +45,19 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
 
         for (Job job : mModel.getJobs()) {
-            jobDao.addJobs(job);
+            if (!job.isSaved()) {
+                jobDao.addJobs(job);
+            } else if (job.isCurrentJob()) {
+                jobDao.updateJob(job);
+            }
         }
         jobDao.close();
+
+        if (weightDao.getWeight() == null) {
+            weightDao.addWeight(mModel.getWeight());
+        } else {
+            weightDao.updateWeight(mModel.getWeight());
+        }
+        weightDao.close();
     }
 }

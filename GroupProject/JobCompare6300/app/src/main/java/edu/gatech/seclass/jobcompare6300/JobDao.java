@@ -66,11 +66,11 @@ public class JobDao {
     }
 
     public List<Job> getData(){
-        List listJob = new ArrayList();
+        List<Job> listJob = new ArrayList<Job>();
         Cursor cursor = db.query("Jobs", null, null, null, null, null,null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext()) {
-            if(cursor != null && cursor.getCount()>=1) {
+            if(cursor != null && cursor.getCount() >= 1) {
                 Job current = new Job();
                 current.setTitle(cursor.getString(cursor.getColumnIndex("title")));
                 current.setCompany(cursor.getString(cursor.getColumnIndex("company")));
@@ -78,10 +78,11 @@ public class JobDao {
                 current.setLivingCost(cursor.getInt(cursor.getColumnIndex("livingCost")));
                 current.setSalary(cursor.getInt(cursor.getColumnIndex("salary")));
                 current.setBonus(cursor.getInt(cursor.getColumnIndex("bonus")));
-                current.setRetirementBenefits(cursor.getInt(cursor.getColumnIndex("retireBenefit")));
+                current.setRetirementBenefits(cursor.getInt(cursor.getColumnIndex("retirementBenefits")));
                 current.setRelocation(cursor.getInt(cursor.getColumnIndex("relocation")));
                 current.setStock(cursor.getInt(cursor.getColumnIndex("stock")));
                 current.setCurrentJob(cursor.getInt(cursor.getColumnIndex("isCurrent")) > 0);
+                current.setSaved(true);
                 listJob.add(current);
             }
         }

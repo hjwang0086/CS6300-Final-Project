@@ -28,23 +28,20 @@ public class WeightFragment extends Fragment {
         mModel = new ViewModelProvider(requireActivity()).get(UserViewModel.class);
 
         // Initialize text if saved previously
-        /*  causes error
         EditText id = view.findViewById(R.id.text_weight_salary);
-        id.setText(mModel.getWeight().getAYS());
+        id.setText(Integer.toString(mModel.getWeight().getAYS()));
 
         id = view.findViewById(R.id.text_weight_bonus);
-        id.setText(mModel.getWeight().getAYB());
+        id.setText(Integer.toString(mModel.getWeight().getAYB()));
 
         id = view.findViewById(R.id.text_weight_benefit);
-        id.setText(mModel.getWeight().getRPB());
+        id.setText(Integer.toString(mModel.getWeight().getRPB()));
 
         id = view.findViewById(R.id.text_weight_stipend);
-        id.setText(mModel.getWeight().getRS());
+        id.setText(Integer.toString(mModel.getWeight().getRS()));
 
         id = view.findViewById(R.id.text_weight_stock);
-        id.setText(mModel.getWeight().getRSUA());
-         */
-
+        id.setText(Integer.toString(mModel.getWeight().getRSUA()));
 
         // Add listeners
         view.findViewById(R.id.btn_weight_save).setOnClickListener(new View.OnClickListener() {

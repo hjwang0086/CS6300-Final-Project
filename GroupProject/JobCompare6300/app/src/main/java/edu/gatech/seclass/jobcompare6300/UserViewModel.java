@@ -38,9 +38,9 @@ public class UserViewModel extends AndroidViewModel {
 
     public List<Job> getJobs() {
         List<Job> jobs = new ArrayList<Job>(mJobOffers);
-        if (mCurrentJob.isCurrentJob())
+        if (mCurrentJob.isCurrentJob()) {
             jobs.add(mCurrentJob); // avoid adding redundant
-
+        }
         jobs.sort(new ScoreComparator().reversed());
 
         return jobs;

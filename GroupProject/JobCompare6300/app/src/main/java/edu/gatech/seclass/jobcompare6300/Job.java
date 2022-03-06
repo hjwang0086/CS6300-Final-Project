@@ -12,6 +12,7 @@ public class Job {
     private int mStock;
     private boolean mIsSelected;
     private boolean mIsCurrentJob;
+    private boolean mIsSaved;
 
     public Job() { reset(); }
 
@@ -27,6 +28,7 @@ public class Job {
         mStock = 0;
         mIsSelected = false;
         mIsCurrentJob = false;
+        mIsSaved = false;
     }
 
     public String getTitle() { return mTitle; }
@@ -40,6 +42,7 @@ public class Job {
     public int getStock() { return mStock; }
     public boolean isSelected() { return mIsSelected; }
     public boolean isCurrentJob() { return mIsCurrentJob; }
+    public boolean isSaved() { return mIsSaved; }
 
     public void setTitle(String title) { mTitle = title; }
     public void setCompany(String company) { mCompany = company; }
@@ -52,6 +55,7 @@ public class Job {
     public void setStock(int stock) { mStock = stock; }
     public void setSelected(boolean isSelected) { mIsSelected = isSelected; }
     public void setCurrentJob(boolean isCurrentJob) { mIsCurrentJob = isCurrentJob; }
+    public void setSaved(boolean isSaved) { mIsSaved = isSaved; }
 
     public boolean equals(Job job) {
         return (mTitle.equals(job.getTitle()) && mCompany.equals(job.getCompany())

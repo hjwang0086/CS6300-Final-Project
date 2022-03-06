@@ -40,22 +40,22 @@ public class JobFragment extends Fragment {
             id.setText(mModel.getCurrentJob().getLocation());
 
             id = view.findViewById(R.id.job_editLivingCost);
-            id.setText(mModel.getCurrentJob().getLivingCost());
+            id.setText(Integer.toString(mModel.getCurrentJob().getLivingCost()));
 
             id = view.findViewById(R.id.job_editSalary);
-            id.setText(mModel.getCurrentJob().getSalary());
+            id.setText(Integer.toString(mModel.getCurrentJob().getSalary()));
 
             id = view.findViewById(R.id.job_editBonus);
-            id.setText(mModel.getCurrentJob().getBonus());
+            id.setText(Integer.toString(mModel.getCurrentJob().getBonus()));
 
             id = view.findViewById(R.id.job_editRetirementBenefits);
-            id.setText(mModel.getCurrentJob().getRetirementBenefits());
+            id.setText(Integer.toString(mModel.getCurrentJob().getRetirementBenefits()));
 
             id = view.findViewById(R.id.job_editRelocation);
-            id.setText(mModel.getCurrentJob().getRelocation());
+            id.setText(Integer.toString(mModel.getCurrentJob().getRelocation()));
 
             id = view.findViewById(R.id.job_editStock);
-            id.setText(mModel.getCurrentJob().getStock());
+            id.setText(Integer.toString(mModel.getCurrentJob().getStock()));
         }
 
         view.findViewById(R.id.btn_job_save).setOnClickListener(new View.OnClickListener() {
