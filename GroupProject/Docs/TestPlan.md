@@ -375,3 +375,310 @@ Android with testing applications tools and extend JUnit and selenium for functi
     - The screen displays a text ”Please enter job/offers before ranking”
 - Pass/Fail: Pass
 - Additional Information: N/A
+
+**Test Case 12**
+
+- Purpose: to test function of edit current job with empth input of title
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: 
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Title should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Title should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 13**
+
+- Purpose: to test function of edit current job with empth input of company
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: 
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Company name should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Company name should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 14**
+
+- Purpose: to test function of edit current job with empth input of location
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: 
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Location should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Location should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 15**
+
+- Purpose: to test function of edit current job with empth input of living cost
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Cost of living should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Cost of living should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 16**
+
+- Purpose: to test function of edit current job with empth input of yearly salary
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Yearly salary should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Yearly salary should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 17**
+
+- Purpose: to test function of edit current job with empth input of yearly bonus
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Yearly bonus should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Yearly bonus should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 18**
+
+- Purpose: to test function of edit current job with empth input of retirement benefit
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Retirement benefit should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Retirement benefit should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+
+**Test Case 19**
+
+- Purpose: to test function of edit current job with empth input of relocation stipend
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Relocation stipend should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Relocation stipend should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 20**
+
+- Purpose: to test function of edit current job with empth input of restricted stock unit award
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Restricted stock unit award should not be empty”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Restricted stock unit award should not be empty”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 21**
+
+- Purpose: to test function of compare offer under offer has not been saved situation
+- Steps:
+    1. Open the app
+    2. Click “ADD OFFER” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 7000000
+        - Relocation Stipend: 5000
+        - RSUA: 20
+    5. Click “COMPARE” button to return to main menu
+- Expected result:
+    - Error shows “Please save offer before compare”
+    - The screen stay in add offer page.
+- Actual result:
+    - Error shows “Please save offer before compare”
+    - The screen stay in add offer page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 22**
+
+- Purpose: to test function of compare offer under situation that more than 2 offers have been selected.
+- Steps:
+    1. Open the app
+    2. Enter three offers using “ADD OFFER”
+    3. *check 1* Three offers should be saved
+    4. Click “RANK JOBS” Button
+    5. *check 2* app should show job ranking screen with entered three jobs
+    6. Click on all three offers
+    7. Click on “COMPARE” button
+- Expected result:
+    - Error shows “Number of selected jobs should be exactly 2”
+    - The screen stay in rank offer page.
+- Actual result:
+    - Error shows “Number of selected jobs should be exactly 2”
+    - The screen stay in rank offer page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 23**
+
+- Purpose: to test function of rank offers under situation that no offer or job is entered
+- Steps:
+    1. Open the app
+    2. Click “RANK JOBS” Button
+- Expected result:
+    - Error shows “Please enter job/offers before ranking”
+    - The screen stay in main menu.
+- Actual result:
+    - Error shows “Please enter job/offers before ranking”
+    - The screen stay in main menu.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
