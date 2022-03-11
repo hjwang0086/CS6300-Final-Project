@@ -99,6 +99,9 @@ public class JobFragment extends Fragment {
         EditText editLocation = getView().findViewById(R.id.job_editLocation);
         if (!TextUtils.isEmpty(editLocation.getText())) {
             newJob.setLocation(editLocation.getText().toString());
+        } else {
+            Toast.makeText(getContext(), "Location should not be empty", Toast.LENGTH_LONG).show();
+            return false;
         }
 
         EditText editLivingCost = getView().findViewById(R.id.job_editLivingCost);
