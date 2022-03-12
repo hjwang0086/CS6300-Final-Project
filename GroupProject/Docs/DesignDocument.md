@@ -16,7 +16,7 @@
 
 - One service is only servable for one user.
 - The application should be run on Android mobile devices.
-- The maximum length of offer list should be fixed depending on the remaining memory size. If a user requests to add more jobs and causes memory crash, the oldest jobs should be swapped out.
+- The maximum length of offer list depends on the remaining memory size.
 
 ### 1.3 System Environment
 
@@ -26,7 +26,6 @@
 - Hardware: Android emulator or Android phone whose version should be newer or equal to 10.0 (Q)
 
 ## 2 Architectural Design
-
 
 ### 2.1 Component Diagram
 
