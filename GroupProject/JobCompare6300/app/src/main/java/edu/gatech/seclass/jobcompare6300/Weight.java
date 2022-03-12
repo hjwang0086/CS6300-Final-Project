@@ -24,6 +24,7 @@ public class Weight {
     public int getRS() { return mRS; }
     public int getRPB() { return mRPB; }
     public int getRSUA() { return mRSUA; }
+    public int getSum() { return mAYS + mAYB + mRS + mRPB + mRSUA; }
 
     public void setAYS(int ays) { mAYS = ays; }
     public void setAYB(int ayb) { mAYB = ayb; }

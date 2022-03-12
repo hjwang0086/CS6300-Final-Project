@@ -62,9 +62,9 @@ public class CompareFragment extends Fragment {
             textLocation1.setText(mModel.getCompareJob1().getLocation());
         }
         TextView textSalary1 = getView().findViewById(R.id.compare_textSalary1);
-        textSalary1.setText(Integer.toString(mModel.getCompareJob1().getSalary()));
+        textSalary1.setText(Integer.toString(mModel.getCompareJob1().getAdjustedSalary()));
         TextView textBonus1 = getView().findViewById(R.id.compare_textBonus1);
-        textBonus1.setText(Integer.toString(mModel.getCompareJob1().getBonus()));
+        textBonus1.setText(Integer.toString(mModel.getCompareJob1().getAdjustedBonus()));
         TextView textRetirementBenefits1 = getView().findViewById(R.id.compare_textRetirementBenefits1);
         textRetirementBenefits1.setText(Integer.toString(mModel.getCompareJob1().getRetirementBenefits()));
         TextView textRelocation1 = getView().findViewById(R.id.compare_textRelocation1);
@@ -85,9 +85,9 @@ public class CompareFragment extends Fragment {
             textLocation2.setText(mModel.getCompareJob2().getLocation());
         }
         TextView textSalary2 = getView().findViewById(R.id.compare_textSalary2);
-        textSalary2.setText(Integer.toString(mModel.getCompareJob2().getSalary()));
+        textSalary2.setText(Integer.toString(mModel.getCompareJob2().getAdjustedSalary()));
         TextView textBonus2 = getView().findViewById(R.id.compare_textBonus2);
-        textBonus2.setText(Integer.toString(mModel.getCompareJob2().getBonus()));
+        textBonus2.setText(Integer.toString(mModel.getCompareJob2().getAdjustedBonus()));
         TextView textRetirementBenefits2 = getView().findViewById(R.id.compare_textRetirementBenefits2);
         textRetirementBenefits2.setText(Integer.toString(mModel.getCompareJob2().getRetirementBenefits()));
         TextView textRelocation2 = getView().findViewById(R.id.compare_textRelocation2);

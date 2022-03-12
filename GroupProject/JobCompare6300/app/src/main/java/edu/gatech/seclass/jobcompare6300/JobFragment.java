@@ -130,7 +130,12 @@ public class JobFragment extends Fragment {
 
         EditText editRetirementBenefits = getView().findViewById(R.id.job_editRetirementBenefits);
         if (!TextUtils.isEmpty(editRetirementBenefits.getText())) {
-            newJob.setRetirementBenefits(Integer.parseInt(editRetirementBenefits.getText().toString()));
+            int retirementBenefits = Integer.parseInt(editRetirementBenefits.getText().toString());
+            if (retirementBenefits < 0 || retirementBenefits > 100) {
+                Toast.makeText(getContext(), "Retirement benefit should be within 0-100", Toast.LENGTH_LONG).show();
+                return false;
+            }
+            newJob.setRetirementBenefits(retirementBenefits);
         } else {
             Toast.makeText(getContext(), "Retirement benefit should not be empty", Toast.LENGTH_LONG).show();
             return false;
