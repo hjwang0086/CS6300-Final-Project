@@ -682,3 +682,106 @@ Android with testing applications tools and extend JUnit and selenium for functi
 - Pass/Fail: Pass
 - Additional Information: N/A
 
+**Test Case 24**
+
+- Purpose: to test function of edit current job with input of retirement benefit smaller than 0
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: -1
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Retirement benefit should be within 0-100”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Retirement benefit should be within 0-100”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 25**
+
+- Purpose: to test function of edit current job with input of retirement benefit larger than 100
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 25
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 101
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Retirement benefit should be within 0-100”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Retirement benefit should be within 0-100”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 26**
+
+- Purpose: to test function of set weight with input of all zero
+- Steps:
+    1. Open the app
+    2. Click “SET WEIGHTS” Button
+    3. *check 1* app should show weight settings screen
+    4. Set the new weight as following:
+        - Yearly Salary: 0
+        - Yearly Bonus: 0
+        - Retirement Benefits: 0
+        - Relocation stipend: 0
+        - Restricted Stock Unit Award: 0
+    5. Click “SAVE AND EXIT” button.
+- Expected result:
+    - Error shows “Weight cannot be all zero”
+    - The screen stay in set weight page.
+- Actual result:
+    - Error shows “Weight cannot be all zero”
+    - The screen stay in set weight page.
+- Pass/Fail: Pass
+- Additional Information: N/A
+
+**Test Case 27**
+
+- Purpose: to test function of edit current job with input of cost living equal to 0
+- Steps:
+    1. Open the app
+    2. Click “SET CURRENT JOB” Button
+    3. *check 1* app should show current job editing screen
+    4. Set current job as following:
+        - Title: “Software Engineer”
+        - Company: “Apple”
+        - Location: “U.S.”
+        - Cost of Living: 0
+        - Yearly Salary: 100000
+        - Yearly Bonus: 50000
+        - Retirement Benefits: 25
+        - Relocation Stipend: 5000
+        - RSUA: 200
+    5. Click “SAVE AND EXIT” button to return to main menu
+- Expected result:
+    - Error shows “Cost of living cannot be 0”
+    - The screen stay in edit current job page.
+- Actual result:
+    - Error shows “Cost of living cannot be 0”
+    - The screen stay in edit current job page.
+- Pass/Fail: Pass
+- Additional Information: N/A
