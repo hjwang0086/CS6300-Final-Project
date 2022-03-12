@@ -124,6 +124,11 @@ public class OfferFragment extends Fragment {
 
         EditText editLivingCost = getView().findViewById(R.id.offer_editLivingCost);
         if (!TextUtils.isEmpty(editLivingCost.getText())) {
+            int livingCost = Integer.parseInt(editLivingCost.getText().toString());
+            if (livingCost == 0) {
+                Toast.makeText(getContext(), "Cost of living cannot be 0", Toast.LENGTH_LONG).show();
+                return false;
+            }
             newJob.setLivingCost(Integer.parseInt(editLivingCost.getText().toString()));
         }  else {
             Toast.makeText(getContext(), "Cost of living should not be empty", Toast.LENGTH_LONG).show();

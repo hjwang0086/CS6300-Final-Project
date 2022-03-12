@@ -47,9 +47,10 @@ public class WeightFragment extends Fragment {
         view.findViewById(R.id.btn_weight_save).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                saveWeight();
-                Toast.makeText(getContext(), "Weights have been updated!", Toast.LENGTH_LONG).show();
-                Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                if (saveWeight()) {
+                    Toast.makeText(getContext(), "Weights have been updated!", Toast.LENGTH_LONG).show();
+                    Navigation.findNavController(view).navigate(R.id.action_weight_to_title);
+                }
             }
         });
         view.findViewById(R.id.btn_weight_cancel).setOnClickListener(new View.OnClickListener() {
@@ -61,7 +62,7 @@ public class WeightFragment extends Fragment {
         return view;
     }
 
-    private void saveWeight() {
+    private boolean saveWeight() {
         Weight newWeight = new Weight();
 
         EditText editAYS = getView().findViewById(R.id.text_weight_salary);
@@ -85,6 +86,12 @@ public class WeightFragment extends Fragment {
             newWeight.setRSUA(Integer.parseInt(editRSUA.getText().toString()));
         }
 
+        if (newWeight.getSum() == 0) {
+            Toast.makeText(getContext(), "Weight cannot be all zero", Toast.LENGTH_LONG).show();
+            return false;
+        }
+
         mModel.setWeight(newWeight);
+        return true;
     }
 }

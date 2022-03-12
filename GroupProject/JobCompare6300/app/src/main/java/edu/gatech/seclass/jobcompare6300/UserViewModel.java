@@ -48,11 +48,12 @@ public class UserViewModel extends AndroidViewModel {
 
     private class ScoreComparator implements Comparator<Job> {
         private float score(Job job) {
-            return (job.getAdjustedSalary() * mWeight.getAYS()
+            float score = job.getAdjustedSalary() * mWeight.getAYS()
                     + job.getAdjustedBonus() * mWeight.getAYB()
                     + job.getRelocation() * mWeight.getRS()
                     + (job.getRetirementBenefits() * (float)job.getSalary() / 100) * mWeight.getRPB()
-                    + ((float)job.getStock() / 4) * mWeight.getRSUA()) / mWeight.getSum();
+                    + ((float)job.getStock() / 4) * mWeight.getRSUA();
+            return (mWeight.getSum() == 0) ? score : score / mWeight.getSum();
         }
 
         // Function to compare

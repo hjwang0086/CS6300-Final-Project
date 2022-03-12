@@ -36,9 +36,9 @@ public class Job {
     public String getLocation() { return mLocation; }
     public int getLivingCost() { return mLivingCost; }
     public int getSalary() { return mSalary; }
-    public int getAdjustedSalary() { return mSalary * 100 / mLivingCost; }
+    public int getAdjustedSalary() { return (mLivingCost == 0) ? mSalary : (mSalary * 100 / mLivingCost); }
     public int getBonus() { return mBonus; }
-    public int getAdjustedBonus() { return mBonus * 100 / mLivingCost; }
+    public int getAdjustedBonus() { return (mLivingCost == 0) ? mBonus : (mBonus * 100 / mLivingCost); }
     public int getRetirementBenefits() { return mRetirementBenefits; }
     public int getRelocation() { return mRelocation; }
     public int getStock() { return mStock; }
