@@ -1,0 +1,14 @@
+My accomplishments for this deliverable
+- Bug fix
+    - fixed equation for calcualting job score
+    - added functions to calculate adjusted salary and bonus in Job class
+    - added a function to calcualte sum of weight to check if any of the weights is 0
+    - fixed zero division issue when calculating adjusted salary and bonus and normalized score
+    - limited retire benefits to 0 - 100 in UI
+    - limited living cost to non-zero
+- Test
+    - tested the app according to TestPlan.md
+- Document update
+    - formated TestPlan.md and updated result
+- Final release
+    - tagged a commit to the release
